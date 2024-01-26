@@ -31,9 +31,9 @@ urlpatterns = [
 ]
 ```
 
-Este código cria 3 views: ``hello_world``, ``welcome`` e ``hello_name``. Cada view é uma função que define a forma como o sistema deve reagir às requisições feitas por uma URL. Neste código, as URLs associadas às 3 views são, respectivamente, ``/`` (apenas o domínio ou o endereço do localhost), ``welcome/`` e ``hello/<str:name>`` (onde ``<str:name>`` deve ser substituído por um nome qualquer).     
+Este código cria 3 views: ``hello_world``, ``welcome`` e ``hello_name``. Cada view é uma função que define a forma como o sistema deve reagir às requisições feitas pelo navegador através de uma URL. Neste código, as URLs associadas às 3 views são, respectivamente, ``/`` (apenas o domínio ou o endereço do localhost), ``welcome/`` e ``hello/<str:name>`` (onde ``<str:name>`` deve ser substituído por um nome qualquer).     
 
-3. Para testar o projeto, crie um servidor local com o seguinte comando no terminal:
+1. Para testar o projeto, crie um servidor local com o seguinte comando no terminal:
 ```
 python manage.py runserver
 ```
