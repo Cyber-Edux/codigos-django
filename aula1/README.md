@@ -31,4 +31,17 @@ urlpatterns = [
 ]
 ```
 
+Este código cria 3 views: ``hello_world``, ``welcome`` e ``hello_name``. Cada view é uma função que define a forma como o sistema deve reagir às requisições feitas por uma URL. Neste código, as URLs associadas às 3 views são, respectivamente, ``/`` (apenas o domínio ou o endereço do localhost), ``welcome/`` e ``hello/<str:name>`` (onde ``<str:name>`` deve ser substituído por um nome qualquer).     
 
+3. Para testar o projeto, crie um servidor local com o seguinte comando no terminal:
+```
+python manage.py runserver
+```
+
+## Modo de uso
+
+Considere que o endereço usado pelo servidor de teste é ``http://127.0.0.1:8000/``.
+
+1. Ao acessar ``http://127.0.0.1:8000/`` pelo navegador, a frase "Hello World!" deve ser recebida.
+2. Ao acessar ``http://127.0.0.1:8000/welcome/``, a frase "Welcome!" deve ser recebida.
+3. Ao acessar ``http://127.0.0.1:8000/hello/fulano``, a frase "Welcome, FULANO!" deve ser recebida.
