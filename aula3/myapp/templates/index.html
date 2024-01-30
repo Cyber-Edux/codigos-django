@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Horário: {{horario}}</h1>
+
+    {% for nome in nomes %}
+    <h1>Hello, {{nome}}</h1>
+    {% endfor %}
+
+    <h1>O número {{numero}} é
+        {% if numero|divisibleby:2 %}
+            par
+        {% else %}
+            ímpar
+        {% endif %}
+    </h1>
+</body>
+</html>
