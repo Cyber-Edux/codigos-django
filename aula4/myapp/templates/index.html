@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light">MEU SITE</a>
+          <form class="d-flex">
+            <a class="btn btn-primary me-1">Write</a>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
+    {%for post in publicacoes%}
+    <main class="mt-5 pt-2 text-justify">
+    <article class="border p-3 bg-light m-3 row align-items-center">
+        
+        <div class="col-auto">
+            <img src='perfil.png' width="32px" >
+        </div>
+        <div class="col">
+            <strong>{{post.autor}}</strong>
+        </div>
+        <div class="col-auto">
+            {{post.data}}
+        </div>
+        <section class="row">
+            <div class="col mt-3">
+                {{post.conteudo}}
+            </div>
+        </section>
+        
+    </article>
+    </main>
+    {%endfor%}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+</html>
