@@ -2,6 +2,7 @@
 {% block title %}Cadastro{% endblock title %}
 {% block content %}
 <form method="POST">
+    {% csrf_token %}
     <div class="mb-2">
         <label for="nome" class="form-label">Nome</label>
         <input type="text" class="form-control" name="nome">
