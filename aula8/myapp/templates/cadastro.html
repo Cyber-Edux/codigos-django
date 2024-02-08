@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Cadastro{% endblock title %}
+{% block content %}
+<form method="POST">
+    <div class="mb-2">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" name="nome">
+    </div>
+    <div class="mb-2">
+        <label for="pais" class="form-label">País</label>
+        <input type="text" class="form-control" name="pais">
+    </div>
+    <div class="mb-2">
+        <label for="estado" class="form-label">Estado</label>
+        <input type="text" class="form-control" name="estado">
+    </div>
+    <div class="mb-2">
+        <label for="cidade" class="form-label">Cidade</label>
+        <input type="text" class="form-control" name="cidade">
+    </div>
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+</form>
+{% endblock content %}
