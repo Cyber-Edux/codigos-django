@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Form{% endblock %}
+{% block content %}
+<form class="">
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input name="nome" type="text" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="sobrenome" class="form-label">Sobrenome</label>
+        <input name="sobrenome" type="text" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+</form>
+{% endblock %}
