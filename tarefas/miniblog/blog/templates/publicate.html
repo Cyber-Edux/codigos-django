@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block pagetitle %}Publication{% endblock pagetitle %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="author" class="form-label">Author</label>
+        <input type="text" class="form-control" name="author">
+    </div>
+    <div class="mb-3">
+        <label for="content" class="form-label">Content</label>
+        <textarea class="form-control" rows="10" name="content"></textarea>
+    </div>
+    <div class="d-flex justify-content-end">
+        <button type="reset" class="btn btn-secondary me-2">Clear</button>
+        <button type="submit" class="btn btn-primary">Publish</button>
+    </div>
+</form>
+</main>
+{% endblock content %}

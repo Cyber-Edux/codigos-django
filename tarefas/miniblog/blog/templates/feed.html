@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block pagetitle %}Feed{% endblock pagetitle %}
+{% block content %}
+{% for post in posts %}
+<div class="row bg-light m-3 border p-3">
+    <div class="row align-items-center">
+        <div class="col-auto">
+            <img src="{% static 'ppic.png' %}" width="32px">
+        </div>
+        <div class="col">
+            <strong>{{post.author}}</strong>
+        </div>
+        <div class="col-auto">
+            {{post.date}}
+        </div>
+    </div>
+    <div class="row mt-3" style="text-align: justify;">
+        <div class="col">
+            {{post.content}}
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock content %}

@@ -21,5 +21,6 @@ from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('cadastro/', views.cadastro_page),
-    path('consulta/', views.consulta_page)
+    path('consulta/', views.consulta_page),
+    path('', views.index)
 ]

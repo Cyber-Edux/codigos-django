@@ -2,6 +2,9 @@ from django.shortcuts import render
 from .models import Pessoa
 from django.http import HttpResponseRedirect, HttpResponseBadRequest
 
+def index(request):
+    return HttpResponseRedirect('/consulta')
+
 def cadastro_page(request):
     if request.method == 'GET':
         return render(request, 'cadastro.html')
@@ -21,4 +24,10 @@ def cadastro_page(request):
         return HttpResponseBadRequest()
 
 def consulta_page(request):
-    return render(request, 'consulta.html')
+    #pessoas = Pessoa.objects.all()
+    #pessoas = Pessoa.objects.filter(estado='Mato Grosso')
+    pessoas = Pessoa.objects.raw('select * from myapp_pessoa where estado="Mato Grosso"')
+    #SELECT * FROM myapp_pessoa WHERE estado="Mato Grosso"
+    return render(request, 'consulta.html', {
+        'pessoas': pessoas
+    })
